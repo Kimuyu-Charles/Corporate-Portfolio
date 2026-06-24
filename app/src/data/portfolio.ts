@@ -46,6 +46,8 @@ export interface Experience {
   achievements: string[];
 }
 
+const publicAsset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+
 export const headline = {
   primary: "I turn complex financial and operational data into clear decisions.",
   secondary: "CFA Charterholder · Investment & Data Analyst · Nairobi",
@@ -127,7 +129,7 @@ export const projects: Project[] = [
     tech: ["Power BI", "DAX", "Data Modeling", "Crypto Analytics"],
     link: "https://github.com/Kimuyu-Charles/Power-Bi-Crypto-Performance-Risk-Dashboard",
     linkLabel: "View Dashboard",
-    image: "/images/project-crypto.jpg",
+    image: publicAsset("images/project-crypto.jpg"),
     featured: true,
   },
   {
@@ -140,7 +142,7 @@ export const projects: Project[] = [
     tech: ["Excel", "VBA", "DCF Modeling", "Scenario Planning"],
     link: "https://github.com/Kimuyu-Charles/Blu-Containers-Financial-Model",
     linkLabel: "View Model",
-    image: "/images/project-blu.jpg",
+    image: publicAsset("images/project-blu.jpg"),
     featured: true,
   },
   {
@@ -153,7 +155,7 @@ export const projects: Project[] = [
     tech: ["Excel", "FAST Standards", "Valuation", "Corporate Finance"],
     link: "https://github.com/Kimuyu-Charles/Corporate-Finance-Model-using-FAST",
     linkLabel: "View Model",
-    image: "/images/project-fast.jpg",
+    image: publicAsset("images/project-fast.jpg"),
     featured: true,
   },
   {
@@ -166,7 +168,7 @@ export const projects: Project[] = [
     tech: ["Python", "Jupyter", "Time Series", "Deep Learning"],
     link: "https://github.com/Kimuyu-Charles/Financial-Time-Series-Forecasting-ML-DL",
     linkLabel: "View Notebook",
-    image: "/images/project-ml.jpg",
+    image: publicAsset("images/project-ml.jpg"),
     featured: false,
   },
   {
@@ -179,7 +181,7 @@ export const projects: Project[] = [
     tech: ["Python", "Pandas", "Predictive Modeling", "Data Analysis"],
     link: "https://github.com/Kimuyu-Charles/Retail-Sales-Performance-Forecasting",
     linkLabel: "View Code",
-    image: "/images/project-retail.jpg",
+    image: publicAsset("images/project-retail.jpg"),
     featured: false,
   },
   {
@@ -192,7 +194,7 @@ export const projects: Project[] = [
     tech: ["Python", "Pandas", "ETL", "Feature Engineering"],
     link: "https://github.com/Kimuyu-Charles/Company-Industry-Data-Pipeline",
     linkLabel: "View Notebook",
-    image: "/images/project-pipeline.jpg",
+    image: publicAsset("images/project-pipeline.jpg"),
     featured: false,
   },
   {
@@ -205,7 +207,7 @@ export const projects: Project[] = [
     tech: ["Python", "NLP", "Text Processing", "Feature Engineering"],
     link: "https://github.com/Kimuyu-Charles/NLP-Company-Text-Analysis",
     linkLabel: "View Notebook",
-    image: "/images/project-nlp.jpg",
+    image: publicAsset("images/project-nlp.jpg"),
     featured: false,
   },
 ];
