@@ -30,6 +30,7 @@ export interface Education {
   degree: string;
   year: string;
   description: string;
+  image: string;
 }
 
 export interface Certification {
@@ -46,7 +47,7 @@ export interface Experience {
   achievements: string[];
 }
 
-const publicAsset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+export const publicAsset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 
 export const headline = {
   primary: "I turn complex financial and operational data into clear decisions.",
@@ -62,6 +63,7 @@ export const about = {
   name: "Charles Kimuyu",
   title: "Investment & Data Analyst",
   location: "Nairobi, Kenya",
+  image: publicAsset("images/Chuck.png"),
   bio: [
     "I help businesses transform financial, operational, and commercial data into dashboards, forecasts, automated reports, and decision-support systems that leadership actually uses.",
     "Currently Data Analytics Coordinator at Kenya Builders & Concrete, where I've automated Power BI reporting, improved data quality, and enabled near real-time tracking of margins, costs, and operational KPIs.",
@@ -244,12 +246,14 @@ export const education: Education[] = [
     degree: "Chartered Financial Analyst (CFA)",
     year: "2025",
     description: "Comprehensive program covering equity and fixed income valuation, financial statement analysis, corporate finance, derivatives, alternative investments, and portfolio management.",
+    image: publicAsset("images/CFA-Charter.jpeg"),
   },
   {
     institution: "Egerton University",
     degree: "Bachelor of Arts in Economics & Sociology",
     year: "2019",
     description: "Coursework in statistics, econometrics, macro and microeconomics, development economics, research methodology, and data analysis.",
+    image: publicAsset("images/Egerton.webp"),
   },
 ];
 

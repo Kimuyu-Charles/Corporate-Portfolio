@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { MapPin, Award } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { about } from "@/data/portfolio";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -86,16 +86,12 @@ export default function About() {
               <div className="absolute -inset-3 rounded-full border-2 border-dashed border-navy-200 animate-[spin_60s_linear_infinite]" />
 
               {/* Image container */}
-              <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-navy-800 to-navy-600 shadow-elevated">
-                {/* Placeholder - user can replace with actual photo */}
-                <div className="w-full h-full flex items-center justify-center text-white">
-                  <div className="text-center">
-                    <div className="w-24 h-24 mx-auto mb-3 rounded-full bg-white/15 flex items-center justify-center">
-                      <Award size={40} className="text-gold-400" />
-                    </div>
-                    <span className="text-sm font-medium text-navy-200">Your Photo</span>
-                  </div>
-                </div>
+              <div className="relative w-full h-full rounded-full overflow-hidden bg-navy-100 shadow-elevated">
+                <img
+                  src={about.image}
+                  alt={about.name}
+                  className="w-full h-full object-cover object-center"
+                />
               </div>
 
               {/* CFA Badge */}

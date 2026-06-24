@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { GraduationCap, Award, ExternalLink } from "lucide-react";
+import { Award, ExternalLink } from "lucide-react";
 import { education, certifications } from "@/data/portfolio";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -88,8 +88,13 @@ export default function Education() {
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-navy-700 to-navy-500 rounded-t-xl" />
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-navy-50 flex items-center justify-center text-navy-700 shrink-0 group-hover:bg-navy-900 group-hover:text-white transition-colors">
-                  <GraduationCap size={22} />
+                <div className="w-12 h-12 rounded-xl bg-navy-50 overflow-hidden shrink-0 ring-1 ring-navy-100">
+                  <img
+                    src={edu.image}
+                    alt={`${edu.institution} credential`}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
 
                 <div className="flex-1 min-w-0">
