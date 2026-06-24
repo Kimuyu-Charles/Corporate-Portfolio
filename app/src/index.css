@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Color System - Deep Navy Executive Palette */
+    --navy-950: 220 60% 8%;
+    --navy-900: 220 55% 12%;
+    --navy-800: 220 50% 18%;
+    --navy-700: 220 45% 25%;
+    --navy-600: 220 40% 32%;
+    --navy-500: 220 35% 42%;
+    --navy-400: 220 30% 55%;
+    --navy-300: 220 25% 68%;
+    --navy-200: 220 20% 82%;
+    --navy-100: 220 15% 92%;
+    --navy-50: 220 10% 97%;
+
+    /* Brand Accent - Muted Gold */
+    --gold-500: 43 65% 52%;
+    --gold-400: 43 60% 62%;
+    --gold-300: 43 55% 72%;
+
+    /* shadcn/ui tokens */
+    --background: 0 0% 100%;
+    --foreground: 220 60% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 60% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 60% 8%;
+    --primary: 220 55% 12%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 220 10% 97%;
+    --secondary-foreground: 220 60% 8%;
+    --muted: 220 10% 97%;
+    --muted-foreground: 220 20% 45%;
+    --accent: 43 65% 52%;
+    --accent-foreground: 220 60% 8%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 220 55% 12%;
+    --radius: 0.5rem;
+
+    /* Typography */
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-serif: 'Playfair Display', Georgia, serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: hsl(var(--foreground));
+    background: hsl(var(--background));
+    line-height: 1.6;
+  }
+
+  /* Selection */
+  ::selection {
+    background: hsl(var(--navy-800) / 0.2);
+    color: hsl(var(--navy-900));
+  }
+
+  /* Focus Visible */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--navy-700));
+    outline-offset: 2px;
+  }
+
+  /* Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Section Spacing */
+  .section {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .section-alt {
+    @apply bg-gradient-to-b from-[hsl(var(--navy-50))] to-[hsl(var(--navy-100)/0.3)];
+  }
+
+  /* Container */
+  .container-tight {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Typography */
+  .heading-display {
+    font-family: var(--font-serif);
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1];
+  }
+
+  .heading-section {
+    font-family: var(--font-serif);
+    @apply text-3xl md:text-4xl font-bold tracking-tight;
+  }
+
+  .heading-subsection {
+    @apply text-xl md:text-2xl font-semibold tracking-tight;
+  }
+
+  .body-large {
+    @apply text-lg md:text-xl text-[hsl(var(--muted-foreground))] leading-relaxed;
+  }
+
+  .body-default {
+    @apply text-base text-[hsl(var(--muted-foreground))] leading-relaxed;
+  }
+
+  .label {
+    @apply text-xs font-semibold uppercase tracking-[0.15em] text-[hsl(var(--navy-500))];
+  }
+
+  /* Interactive Elements */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-[hsl(var(--navy-900))] text-white font-semibold rounded-lg transition-all duration-300 hover:bg-[hsl(var(--navy-800))] hover:shadow-lg hover:shadow-[hsl(var(--navy-900)/0.2)] hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent text-[hsl(var(--navy-900))] font-semibold rounded-lg border-2 border-[hsl(var(--navy-200))] transition-all duration-300 hover:border-[hsl(var(--navy-400))] hover:bg-[hsl(var(--navy-50))] hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-[hsl(var(--navy-600))] font-medium rounded-lg transition-all duration-300 hover:text-[hsl(var(--navy-900))] hover:bg-[hsl(var(--navy-50))];
+  }
+
+  /* Cards */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:shadow-[hsl(var(--navy-900)/0.08)] hover:-translate-y-1;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--navy-900)) 0%, hsl(var(--navy-600)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer utilities {
+  /* Custom scrollbar */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
