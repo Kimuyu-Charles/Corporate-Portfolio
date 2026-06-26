@@ -66,7 +66,7 @@ export const about = {
   image: publicAsset("images/Chuck.png"),
   bio: [
     "I help businesses transform financial, operational, and commercial data into dashboards, forecasts, automated reports, and decision-support systems that leadership actually uses.",
-    "Currently Data Analytics Coordinator at Kenya Builders & Concrete, where I've automated Power BI reporting, improved data quality, and enabled near real-time tracking of margins, costs, and operational KPIs.",
+    "Currently Data Analytics Lead at Kenya Builders & Concrete, where I've automated Power BI reporting, improved data quality, and enabled near real-time tracking of margins, costs, and operational KPIs.",
     "CFA Charterholder with all three levels completed. My background spans equity valuation, financial statement analysis, portfolio management, and increasingly, the Python and machine-learning tools that augment traditional finance work.",
   ],
   stats: [
@@ -216,7 +216,7 @@ export const projects: Project[] = [
 
 export const experience: Experience[] = [
   {
-    role: "Data Analytics Coordinator",
+    role: "Data Analytics Lead",
     company: "Kenya Builders & Concrete Company Ltd",
     period: "2023 - Present",
     description: "Lead data analytics function, building reporting infrastructure and delivering insights to management.",
@@ -230,7 +230,7 @@ export const experience: Experience[] = [
   {
     role: "Investment Analyst",
     company: "Independent / Project-Based",
-    period: "2021 - Present",
+    period: "2022 - Present",
     description: "Self-directed investment research and financial modeling for various clients and personal projects.",
     achievements: [
       "Completed all 3 levels of the CFA Program",
