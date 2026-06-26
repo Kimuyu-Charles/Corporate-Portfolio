@@ -26,10 +26,6 @@ export default function Hero() {
     document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const scrollToContact = () => {
-    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section
       ref={heroRef}
@@ -114,13 +110,16 @@ export default function Hero() {
             <Briefcase size={18} />
             {headline.cta.primary}
           </button>
-          <button
-            onClick={scrollToContact}
+          <a
+            href={headline.cta.secondaryUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            download
             className="inline-flex items-center gap-2 px-8 py-4 bg-transparent text-white font-semibold rounded-lg border-2 border-white/25 hover:border-white/50 hover:bg-white/5 transition-all duration-300 hover:-translate-y-0.5"
           >
             <Download size={18} />
             {headline.cta.secondary}
-          </button>
+          </a>
         </div>
 
         {/* Scroll Indicator */}

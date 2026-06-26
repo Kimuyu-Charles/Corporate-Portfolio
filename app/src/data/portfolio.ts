@@ -55,7 +55,7 @@ export const headline = {
   cta: {
     primary: "View My Work",
     secondary: "Download CV",
-    secondaryUrl: "/assets/Kimuyu_CV.pdf",
+    secondaryUrl: publicAsset("images/Kimuyu_Resume.pdf"),
   },
 };
 

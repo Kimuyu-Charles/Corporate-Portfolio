@@ -1,4 +1,5 @@
 import { ArrowUp, Linkedin, Github, Mail } from "lucide-react";
+import { headline } from "@/data/portfolio";
 
 const footerLinks = [
   { label: "About", href: "#about" },
@@ -87,8 +88,10 @@ export default function Footer() {
 
             {/* CV Download */}
             <a
-              href="/assets/Kimuyu_CV.pdf"
+              href={headline.cta.secondaryUrl}
               target="_blank"
+              rel="noopener noreferrer"
+              download
               className="mt-4 inline-flex items-center gap-2 text-sm text-navy-400 hover:text-white transition-colors"
             >
               <span className="font-medium">Download CV</span>
